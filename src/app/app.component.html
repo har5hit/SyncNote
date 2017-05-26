@@ -1,0 +1,26 @@
+
+<form #demoForm="ngForm" (ngSubmit)="onSubmit(demoForm.value)">
+<md-card>
+
+  <md-card-header>
+    <md-card-title>Simple Form</md-card-title>
+  </md-card-header>
+
+  <md-card-content>
+    <md-input-container>
+      <input mdInput #v_name placeholder="Your name" name="name" required ngModel>
+    </md-input-container>
+    <br>
+    <br>
+    <md-input-container>
+      <input  mdInput #v_email type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Email" name="email" required ngModel>
+      <md-error *ngIf="v_email.value.length">Enter a valid email id</md-error>
+    </md-input-container>
+
+  </md-card-content>
+
+  <md-card-actions>
+    <button md-button [disabled]="!demoForm.form.valid" type="submit">Click me!</button>
+  </md-card-actions>
+</md-card>
+</form>
