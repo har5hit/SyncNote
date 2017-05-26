@@ -1,0 +1,59 @@
+<md-spinner #spinner *ngIf="!isloaded"></md-spinner>
+<form #demoForm="ngForm" (ngSubmit)="onSubmit(demoForm.value)">
+  <md-card>
+
+    <md-card-header>
+      <md-card-title>Simple Form</md-card-title>
+    </md-card-header>
+
+    <md-card-content>
+      <md-input-container>
+        <input mdInput #v_name placeholder="Your name" name="name" required ngModel>
+      </md-input-container>
+      <br>
+      <md-input-container>
+        <input mdInput #v_mobile placeholder="Mobile" type="number" min="7000000000" max="9999999999" name="mobile" required ngModel>
+      </md-input-container>
+      <br>
+      <md-input-container>
+        <input mdInput #v_email type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Email" name="email" required
+          ngModel>
+        <md-error *ngIf="v_email.value.length">Enter a valid email id</md-error>
+      </md-input-container>
+      <br>
+      <md-radio-group name="gender" required ngModel>
+        <md-radio-button value="Boy">Boy</md-radio-button>
+        <md-radio-button value="Girl">Girl</md-radio-button>
+      </md-radio-group>
+    </md-card-content>
+    <md-card-actions>
+
+      <br>
+      <md-checkbox name="accept" #cb required ngModel>I accept to invade my data!</md-checkbox>
+      <br>
+      <button md-button [disabled]="demoForm.form.invalid || !cb.checked " type="submit">Click me!</button>
+    </md-card-actions>
+  </md-card>
+
+
+
+</form>
+<br>
+<md-grid-list cols="5" rowHeight="1:1" rowHeight="30">
+  <md-grid-tile>No.</md-grid-tile>
+  <md-grid-tile>Name</md-grid-tile>
+  <md-grid-tile>Mobile</md-grid-tile>
+  <md-grid-tile>Email</md-grid-tile>
+  <md-grid-tile>Gender</md-grid-tile>
+
+
+  <ng-container *ngFor="let person of data|async let i=index">
+    <md-grid-tile>{{i+1}}</md-grid-tile>
+    <md-grid-tile>{{person.name}}</md-grid-tile>
+    <md-grid-tile>{{person.mobile}}</md-grid-tile>
+    <md-grid-tile>{{person.email}}</md-grid-tile>
+    <md-grid-tile>{{person.gender}}</md-grid-tile>
+
+  </ng-container>
+
+</md-grid-list>
