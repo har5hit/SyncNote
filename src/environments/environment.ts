@@ -6,12 +6,11 @@
 export const environment = {
   production: false,
   firebase: {
-
-    apiKey: "AIzaSyA48EfHZvqlZkRDaxzWuaxP8DGMzV0sBqg",
-    authDomain: "angular4-demo.firebaseapp.com",
-    databaseURL: "https://angular4-demo.firebaseio.com",
-    projectId: "angular4-demo",
-    storageBucket: "angular4-demo.appspot.com",
-    messagingSenderId: "115835651427"
+    apiKey: "AIzaSyA5CNgthJw2n9KTcuNu5FCTNDMprvZrTKY",
+    authDomain: "syncnote-a4009.firebaseapp.com",
+    databaseURL: "https://syncnote-a4009.firebaseio.com",
+    projectId: "syncnote-a4009",
+    storageBucket: "syncnote-a4009.appspot.com",
+    messagingSenderId: "384541926814"
   }
 };

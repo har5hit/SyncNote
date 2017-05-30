@@ -1,0 +1,33 @@
+<form #myForm="ngForm" (ngSubmit)="register(myForm.value)">
+  <md-card>
+
+    <md-card-header>
+      <md-card-title>Register</md-card-title>
+    </md-card-header>
+    <md-card-content>
+      <md-input-container>
+        <input mdInput #v_email type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Email" name="email" required
+          ngModel>
+      </md-input-container>
+      <br>
+
+      <md-input-container>
+        <input mdInput #v_newpass placeholder="New Password" type="password" name="pwd" required ngModel>
+      </md-input-container>
+      <br>
+      <md-input-container>
+        <input mdInput #v_cfmpass placeholder="Confirm Password" type="password" name="cpwd" required ngModel>
+      </md-input-container>
+      <p *ngIf="v_newpass.value!=v_cfmpass.value">The password doesnt match!</p>
+
+      <br>
+    </md-card-content>
+    <md-card-actions>
+      <br>
+      <md-checkbox name="accept" #cb required ngModel>Fine with no security?</md-checkbox>
+      <br>
+      <button md-button [disabled]="myForm.form.invalid || !cb.checked" type="submit">Register</button>
+      <a md-button routerLink="/login">Login!</a>
+    </md-card-actions>
+  </md-card>
+</form>

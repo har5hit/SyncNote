@@ -25,7 +25,7 @@ export class FormComponent implements OnInit {
   console.log("executed");});
   }
 
-  onSubmit(form: any) {
+  submit(form: any) {
     console.log(form);
     this.data.push(new Person(form.name, form.email, form.mobile, form.gender))
       .then((message: any) => console.log("suucess is" + message))

@@ -1,0 +1,25 @@
+<form #myForm="ngForm" (ngSubmit)="login(myForm.value)">
+  <md-card>
+    <md-card-header>
+      <md-card-title>Login</md-card-title>
+    </md-card-header>
+    <md-card-content>
+      <md-input-container>
+        <input mdInput #v_email type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Email" name="email" required
+          ngModel>
+      </md-input-container>
+      <br>
+      <md-input-container>
+        <input mdInput #v_pass placeholder="Password" type="password" name="pwd" required ngModel>
+      </md-input-container>
+      <br>
+    </md-card-content>
+    <md-card-actions>
+      <br>
+      <ng-container>
+        <button md-button [disabled]="myForm.form.invalid" type="submit">Login!</button>
+        <a md-button routerLink="/register">Registration!</a>
+      </ng-container>
+    </md-card-actions>
+  </md-card>
+</form>

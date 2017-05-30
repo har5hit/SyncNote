@@ -10,19 +10,42 @@ import {
   MdCardModule, MdListModule,
   MdGridListModule, MdSnackBarModule,
   MdCheckboxModule, MdRadioModule,
-  MdProgressSpinnerModule
+  MdProgressSpinnerModule,
 } from '@angular/material';
-import { FormComponent } from './form/form.component';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-
-import { AngularFireModule } from 'angularfire2';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { RouterModule, Route } from '@angular/router';
 import { environment } from '../environments/environment';
 
+import { FbModule } from './services/fb.module';
+import { AngularFireModule } from 'angularfire2';
+
+
+const rootRoutes: Route[] = [
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
+    path: 'dashboard',
+    loadChildren: './dashboard/dashboard.module#DashboardModule',
+  
+},
+  {
+    path: '',
+    component: LoginComponent
+  }
+]
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormComponent
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -38,9 +61,11 @@ import { environment } from '../environments/environment';
     MdCheckboxModule,
     MdRadioModule,
     MdProgressSpinnerModule,
-    AngularFireDatabaseModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    FbModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    RouterModule.forRoot(rootRoutes)
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
