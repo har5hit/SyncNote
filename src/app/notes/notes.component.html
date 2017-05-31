@@ -12,6 +12,10 @@
           {{tile.content}}
         </p>
       </md-card-content>
+
+        <md-card-actions>
+    <button md-button (click)=deletePost(tile.id)>Delete</button>
+  </md-card-actions>
     </md-card>
   </md-grid-tile>
 </md-grid-list>

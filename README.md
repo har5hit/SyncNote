@@ -1,4 +1,4 @@
-# angular4_demo
-Basic angular 4 components
+# SyncNote
+Made using angular 4 and firebase.
 
 Try it at: http://har5hit.github.io/angular4_demo/

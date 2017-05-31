@@ -1,9 +1,8 @@
 <h1 md-dialog-title> <input type="text" name="text" placeholder="title"  [(ngModel)]="title" ngModel></h1>
-  <div md-dialog-content> <input type="text" name="content" 
-  placeholder="content" [(ngModel)]="content">  
+  <div md-dialog-content> 
+  <textarea  name="content" rows="5"  [(ngModel)]="content"></textarea> 
  </div>
 <div md-dialog-actions>
-
 
    <button md-button (click)="add()">Add</button>
    <button md-dialog-close>close</button>

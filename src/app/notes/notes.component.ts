@@ -37,7 +37,10 @@ export class NotesComponent implements OnInit {
     this.openPopup(key,title,content);
   }
 
-
+deletePost(key:any)
+{
+  this.fb.getNotesReference().child(key).remove()
+}
 
 }
 
