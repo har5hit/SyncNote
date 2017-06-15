@@ -3,13 +3,26 @@
 <head>
   <meta charset="utf-8">
   <title>Mydemo</title>
-  <base href="https://har5hit.github.io/SyncNote/">
+  <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }).catch(function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  }
+</script>
+
 <link href="styles.3240c586a6161bd68f06.bundle.css" rel="stylesheet"/></head>
 <body>
   <app-root>Loading...</app-root>
-<script type="text/javascript" src="inline.2a696cf0861e98c49f92.bundle.js"></script><script type="text/javascript" src="polyfills.73053c89e82db773ad9f.bundle.js"></script><script type="text/javascript" src="vendor.325379acf8d31ca57356.bundle.js"></script><script type="text/javascript" src="main.b0a04bf6e209b6e7b667.bundle.js"></script></body>
+<script type="text/javascript" src="inline.618081ced49762c58f89.bundle.js"></script><script type="text/javascript" src="polyfills.73053c89e82db773ad9f.bundle.js"></script><script type="text/javascript" src="vendor.6b661fe8fe416b4c0b75.bundle.js"></script><script type="text/javascript" src="main.7204f93267fc701929bb.bundle.js"></script></body>
 </html>
