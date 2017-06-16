@@ -1,4 +1,4 @@
 # SyncNote
 Made using angular 4 and firebase.
 
-Try it at: http://har5hit.github.io/SyncNote/
+Try it at: https://syncnote-a4009.firebaseapp.com
