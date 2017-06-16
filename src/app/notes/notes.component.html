@@ -1,21 +1,24 @@
-<button md-button   tabindex="-1" (click)="newPost()">New</button>
-<md-grid-list cols="4" gutterSize="10px">
+<button md-button tabindex="-1" (click)="newPost()">New</button>
 
-  <md-grid-tile *ngFor="let tile of data|async" [colspan]="1" [rowspan]="1"  (click)="updatePost(tile.id,tile.title,tile.content)">
 
-    <md-card>
-      <md-card-header>
-        <md-card-title>{{tile.title}}</md-card-title>
-      </md-card-header>
-      <md-card-content>
-        <p>
-          {{tile.content}}
-        </p>
-      </md-card-content>
+<div id="flex_content">
+<ng-container *ngFor="let tile of data|async" >
+  <div id="flex_items" (click)="updatePost(tile.id,tile.title,tile.content)">
+  <md-card>
+    <md-card-header>
+      <md-card-title>{{tile.title}}</md-card-title>
+    </md-card-header>
+    <md-card-content>
+      <p>
+        {{tile.content}}
+      </p>
+    </md-card-content>
 
-        <md-card-actions>
-    <button md-button (click)=deletePost(tile.id)>Delete</button>
-  </md-card-actions>
-    </md-card>
-  </md-grid-tile>
-</md-grid-list>
+    <md-card-actions>
+      <button md-button (click)=deletePost(tile.id)>Delete</button>
+    </md-card-actions>
+  </md-card>
+  </div>
+</ng-container>
+
+</div>

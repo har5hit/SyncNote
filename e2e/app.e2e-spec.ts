@@ -1,10 +1,10 @@
-import { MydemoPage } from './app.po';
+import { Angular4DemoPage } from './app.po';
 
-describe('mydemo App', () => {
-  let page: MydemoPage;
+describe('angular4-demo App', function() {
+  let page: Angular4DemoPage;
 
   beforeEach(() => {
-    page = new MydemoPage();
+    page = new Angular4DemoPage();
   });
 
   it('should display message saying app works', () => {

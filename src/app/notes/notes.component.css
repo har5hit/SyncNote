@@ -1,0 +1,12 @@
+#flex_content{
+    display: flex;
+        justify-content: space-around;
+        flex-flow: wrap;
+}
+
+#flex_items{
+    border: 1px solid black;
+    display: flex;
+    flex-flow: wrap;
+}
+

@@ -42,6 +42,7 @@ deletePost(key:any)
   this.fb.getNotesReference().child(key).remove()
 }
 
+
 }
 
 export class Note {
