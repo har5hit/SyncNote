@@ -3,7 +3,7 @@
   "short_name": "SyncNote",
   "icons": [
     {
-      "src": "pinwheel.svg",
+      "src": "./assets/pinwheel.svg",
       "sizes": "192x192",
       "type": "image\/svg"
     }
