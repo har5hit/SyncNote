@@ -1,0 +1,8 @@
+.mat-toolbar .mat-toolbar-row {
+    justify-content: flex-end;
+}
+
+#app_name
+{
+	flex:1;
+}

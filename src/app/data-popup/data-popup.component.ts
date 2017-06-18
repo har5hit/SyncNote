@@ -23,7 +23,6 @@ export class DataPopupComponent implements OnInit {
     this.key = key
     this.title=title
     this.content=content
-    console.log("key set"+key)
   }
 
 

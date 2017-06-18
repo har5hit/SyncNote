@@ -1,11 +1,10 @@
 <md-toolbar color="primary">
-  <span>My App</span>
-  <span class="example-spacer"></span>
+  <span id="app_name">My App</span>
 
-  <a class="example-icon" routerLink="notes">Notes</a>
+  <a md-button  routerLink="notes">Notes</a>
 
-  <a class="example-icon" routerLink="profile">Profile</a>
+  <a md-button routerLink="profile">Profile</a>
 
-  <a class="example-icon" (click)="logout()">Logout</a>
+  <a md-button (click)="logout()">Logout</a>
 </md-toolbar>
 <router-outlet></router-outlet>

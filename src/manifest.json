@@ -3,11 +3,12 @@
   "short_name": "SyncNote",
   "icons": [
     {
-      "src": "favico.ico",
+      "src": "pinwheel.svg",
       "sizes": "192x192",
-      "type": "image\/ico"
+      "type": "image\/svg"
     }
   ],
+  "theme_color": "#4C4CFF",
   "display": "standalone",
   "start_url": "./?utm_source=web_app_manifest"
 }

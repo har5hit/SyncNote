@@ -5,8 +5,5 @@
 }
 
 #flex_items{
-    border: 1px solid black;
-    display: flex;
-    flex-flow: wrap;
+    padding: 8px;
 }
-

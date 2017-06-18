@@ -23,6 +23,11 @@ const dashRoutes: Route[] = [
     path: '',
     component: DashboardComponent,
     children: [
+	{
+        path: '',
+		        component: NotesComponent
+
+      },
       {
         path: 'profile',
         component: FormComponent

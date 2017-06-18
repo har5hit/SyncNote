@@ -1,10 +1,12 @@
-<h1 md-dialog-title> <input type="text" name="text" placeholder="title"  [(ngModel)]="title" ngModel></h1>
-  <div md-dialog-content> 
-  <textarea  name="content" rows="5"  [(ngModel)]="content"></textarea> 
- </div>
-<div md-dialog-actions>
-
-   <button md-button (click)="add()">Add</button>
-   <button md-dialog-close>close</button>
-
-</div>
+ <md-card>
+    <md-card-header>
+      <md-card-title><h1><input type="text" name="text" placeholder="title"  [(ngModel)]="title"></h1></md-card-title>
+    </md-card-header>
+    <md-card-content>
+        <textarea  name="content" rows="5"  [(ngModel)]="content"></textarea> 
+    </md-card-content>
+    <md-card-actions>
+<button md-button (click)="add()">Add</button>
+   <button md-button md-dialog-close>Close</button>
+   </md-card-actions>
+  </md-card>
